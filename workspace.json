@@ -1,6 +1,8 @@
 {
   "version": 2,
   "projects": {
-    "control-flow": "apps/control-flow"
+    "qontrol-client": "apps/qontrol-client",
+    "qontrol-client-e2e": "apps/qontrol-client-e2e",
+    "ui-buttons": "libs/ui-buttons"
   }
 }

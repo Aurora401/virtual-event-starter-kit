@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@qontrol/buttons": ["libs/ui-buttons/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
