@@ -1,0 +1,52 @@
+{
+  "root": "apps/qontrol-api",
+  "sourceRoot": "apps/qontrol-api/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/qontrol-api",
+        "main": "apps/qontrol-api/src/main.ts",
+        "tsConfig": "apps/qontrol-api/tsconfig.app.json",
+        "assets": ["apps/qontrol-api/src/assets"]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/qontrol-api/src/environments/environment.ts",
+              "with": "apps/qontrol-api/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/node:execute",
+      "options": {
+        "buildTarget": "qontrol-api:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/qontrol-api/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/qontrol-api"],
+      "options": {
+        "jestConfig": "apps/qontrol-api/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

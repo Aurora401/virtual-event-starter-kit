@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "qontrol-api": "apps/qontrol-api",
     "qontrol-client": "apps/qontrol-client",
     "qontrol-client-e2e": "apps/qontrol-client-e2e",
     "ui-buttons": "libs/ui-buttons"

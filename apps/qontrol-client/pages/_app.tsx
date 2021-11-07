@@ -1,7 +1,7 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import './styles.css';
-import 'semantic-ui-css/semantic.min.css'
+import 'semantic-ui-css/semantic.min.css';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
@@ -9,8 +9,8 @@ function CustomApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Welcome to qontrol-client!</title>
       </Head>
-      <main className="app">        
-          <Component {...pageProps} />
+      <main className="app">
+        <Component {...pageProps} />
       </main>
     </>
   );

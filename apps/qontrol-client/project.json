@@ -19,7 +19,8 @@
       "executor": "@nrwl/next:server",
       "options": {
         "buildTarget": "qontrol-client:build",
-        "dev": true
+        "dev": true,
+        "proxyConfig": "apps/qontrol-client/proxy.conf.json"
       },
       "configurations": {
         "production": {
