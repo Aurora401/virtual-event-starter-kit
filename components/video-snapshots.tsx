@@ -14,17 +14,24 @@
  * limitations under the License.
  */
 
-module.exports = {
-  images: {
-    domains: [
-      'picsum.photos',
-      'www.datocms-assets.com',
-      'a.storyblok.com',
-      'images.ctfassets.net',
-      'images.prismic.io',
-      'cdn.aglty.io',
-      'localhost' // For Strapi
-    ],
-    imageSizes: [24, 64, 300]
-  }
-};
+import React, { useState, useEffect } from 'react';
+import styles from './video-snapshots.module.css';
+import { SHORT_DATE } from '@lib/constants';
+import VideoCard from './video-card';
+
+export default function VideoSnaphotsContainer() {
+  const video = {
+    title: 'Video tttle',
+    thumbnail: 'https://picsum.photos/536/354',
+    start: 'string',
+    end: 'string'
+  };
+
+  return (
+    <div className={styles.schedule}>
+      <h3 className={styles.header}>Video Snapshots</h3>
+      <p>{SHORT_DATE}</p>
+      <VideoCard video={video} />
+    </div>
+  );
+}

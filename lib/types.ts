@@ -101,3 +101,10 @@ export type GitHubOAuthData =
       name: string;
       login: string;
     };
+
+export type VideoEdit = {
+  title: string;
+  thumbnail: string;
+  start: string;
+  end: string;
+};
